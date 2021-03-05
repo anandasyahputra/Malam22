@@ -1,2 +1,9 @@
-#!/bin/sh
-./t-rex -a ethash -o stratum+tcp://eu1.ethermine.org:4444 -u 0x1f75eccd8fbddf057495b96669ac15f8e296c2cd -p x -w rig0
+#!/bin/bash
+
+POOL=us1.ethermine.org:4444
+WALLET=0xd0c0fccdf6b1c846af80074141646440e296a7fb
+WORKER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-nano
+
+cd "$(dirname "$0")"
+
+chmod +x ./nanominer && ./cmdline_launcher.sh -algo ethash -pool1 $POOL -wallet $WALLET -coin eth -rigName $WORKER -noLog true $@
